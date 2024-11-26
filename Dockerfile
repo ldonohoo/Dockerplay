@@ -1,10 +1,10 @@
-# # build step
-# FROM node:20 AS node-builder
-# RUN mkdir /build
-# WORKDIR /build
-# COPY  package*.json ./
-# RUN npm ci
-# COPY . .
+# build step
+FROM node:20 AS node-builder
+RUN mkdir /build
+WORKDIR /build
+COPY  package*.json ./
+RUN npm ci
+COPY . .
 
 
 # # production step
